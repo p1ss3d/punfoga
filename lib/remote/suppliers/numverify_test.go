@@ -12,7 +12,7 @@ import (
 func TestNumverifySupplierSuccessCustomApiKey(t *testing.T) {
 	defer gock.Off() // Flush pending mocks after test execution
 
-	number := "11115551212"
+	number := "4793068820"
 	apikey := "08c4a51a4c0382ad574b0e81df42d179"
 
 	expectedResult := &NumverifyValidateResponse{
@@ -46,7 +46,7 @@ func TestNumverifySupplierSuccessCustomApiKey(t *testing.T) {
 func TestNumverifySupplierError(t *testing.T) {
 	defer gock.Off() // Flush pending mocks after test execution
 
-	number := "11115551212"
+	number := "4793068820"
 	apikey := "08c4a51a4c0382ad574b0e81df42d179"
 
 	expectedResult := &NumverifyErrorResponse{
@@ -70,7 +70,7 @@ func TestNumverifySupplierError(t *testing.T) {
 func TestNumverifySupplierHTTPError(t *testing.T) {
 	defer gock.Off() // Flush pending mocks after test execution
 
-	number := "11115551212"
+	number := "4793068820"
 
 	_ = os.Setenv("NUMVERIFY_API_KEY", "08c4a51a4c0382ad574b0e81df42d179")
 	defer os.Clearenv()
@@ -87,7 +87,7 @@ func TestNumverifySupplierHTTPError(t *testing.T) {
 	assert.Nil(t, got)
 	assert.Equal(t, &url.Error{
 		Op:  "Get",
-		URL: "https://api.apilayer.com/number_verification/validate?number=11115551212",
+		URL: "https://api.apilayer.com/number_verification/validate?number=4793068820",
 		Err: dummyError,
 	}, err)
 }
