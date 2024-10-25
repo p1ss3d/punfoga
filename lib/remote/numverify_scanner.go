@@ -6,7 +6,7 @@ import (
 	"github.com/sundowndev/phoneinfoga/v2/lib/remote/suppliers"
 )
 
-const Numverify = "93068820"
+const Numverify = "Numverify"
 
 type numverifyScanner struct {
 	client suppliers.NumverifySupplierInterface
