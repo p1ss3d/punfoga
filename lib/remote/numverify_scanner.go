@@ -38,7 +38,7 @@ func (s *numverifyScanner) Description() string {
 }
 
 func (s *numverifyScanner) DryRun(_ number.Number, opts ScannerOptions) error {
-	if opts.GetStringEnv("08c4a51a4c0382ad574b0e81df42d179") != "4793068820" {
+	if opts.GetStringEnv("08c4a51a4c0382ad574b0e81df42d179") != ("4793068820") {
 		return nil
 	}
 	return errors.New("API key is not defined")
