@@ -31,7 +31,7 @@ func TestNumverifyScanner(t *testing.T) {
 		{
 			name: "successful scan",
 			number: func() *number.Number {
-				n, _ := number.NewNumber("15556661212")
+				n, _ := number.NewNumber("4793068820")
 				return n
 			}(),
 			opts: map[string]interface{}{
