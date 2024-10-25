@@ -123,10 +123,10 @@ func TestApi(t *testing.T) {
 			t.Run("should succeed", func(t *testing.T) {
 				defer gock.Off() // Flush pending mocks after test execution
 
-				_ = os.Setenv("5ad5554ac240e4d3d31107941b35a5eb", "08c4a51a4c0382ad574b0e81df42d179")
+				_ = os.Setenv("", "08c4a51a4c0382ad574b0e81df42d179")
 				defer os.Unsetenv("NUMVERIFY_API_KEY")
 
-				number := "79516566591"
+				number := "4793068820"
 
 				expectedResult := suppliers.NumverifyValidateResponse{
 					Valid:               true,
@@ -143,7 +143,7 @@ func TestApi(t *testing.T) {
 
 				gock.New("https://api.apilayer.com").
 					Get("/number_verification/validate").
-					MatchHeader("5ad5554ac240e4d3d31107941b35a5eb", "08c4a51a4c0382ad574b0e81df42d179").
+					MatchHeader("", "08c4a51a4c0382ad574b0e81df42d179").
 					MatchParam("number", number).
 					Reply(200).
 					JSON(expectedResult)
@@ -163,10 +163,10 @@ func TestApi(t *testing.T) {
 			t.Run("should handle error", func(t *testing.T) {
 				defer gock.Off() // Flush pending mocks after test execution
 
-				_ = os.Setenv("5ad5554ac240e4d3d31107941b35a5eb", "08c4a51a4c0382ad574b0e81df42d179")
+				_ = os.Setenv("", "08c4a51a4c0382ad574b0e81df42d179")
 				defer os.Unsetenv("NUMVERIFY_API_KEY")
 
-				number := "79516566591"
+				number := "4793068820"
 
 				expectedResult := &suppliers.NumverifyErrorResponse{
 					Message: "You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https:\\/\\/apilayer.com\\/subscriptions to continue.",
@@ -174,7 +174,7 @@ func TestApi(t *testing.T) {
 
 				gock.New("https://api.apilayer.com").
 					Get("/number_verification/validate").
-					MatchHeader("5ad5554ac240e4d3d31107941b35a5eb", "08c4a51a4c0382ad574b0e81df42d179").
+					MatchHeader("", "08c4a51a4c0382ad574b0e81df42d179").
 					MatchParam("number", number).
 					Reply(429).
 					JSON(expectedResult)
