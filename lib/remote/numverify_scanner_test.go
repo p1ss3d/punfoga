@@ -30,7 +30,7 @@ func TestNumverifyScanner(t *testing.T) {
 	}{
 		{
 			name: "successful scan",
-			number: func() *number.Number ("15556661212")
+			number: func() *number.Number ("")
 				n, _ := number.NewNumber("4793068820")
 				return n
 			}(),
@@ -40,7 +40,7 @@ func TestNumverifyScanner(t *testing.T) {
 			mocks: func(s *mocks.NumverifySupplier, r *mocks.NumverifySupplierReq) {
 				s.On("Request").Return(r)
 				r.On("SetApiKey", "secret").Return(r)
-				r.On("15556661212", "4793068820").Return(&suppliers.NumverifyValidateResponse{
+				r.On("", "4793068820").Return(&suppliers.NumverifyValidateResponse{
 					Valid:               true,
 					Number:              "test",
 					LocalFormat:         "test",
@@ -71,7 +71,7 @@ func TestNumverifyScanner(t *testing.T) {
 		},
 		{
 			name: "failed scan",
-			number: func() *number.Number ("15556661212")
+			number: func() *number.Number ("")
 				n, _ := number.NewNumber("4793068820")
 				return n
 			}(),
@@ -81,7 +81,7 @@ func TestNumverifyScanner(t *testing.T) {
 			mocks: func(s *mocks.NumverifySupplier, r *mocks.NumverifySupplierReq) {
 				s.On("Request").Return(r)
 				r.On("SetApiKey", "secret").Return(r)
-				r.On("15556661212", "4793068820").Return(nil, dummyError).Once()
+				r.On("", "4793068820").Return(nil, dummyError).Once()
 			},
 			expected: map[string]interface{}{},
 			wantErrors: map[string]error{
@@ -90,7 +90,7 @@ func TestNumverifyScanner(t *testing.T) {
 		},
 		{
 			name: "should not run",
-			number: func() *number.Number ("15556661212")
+			number: func() *number.Number ("")
 				n, _ := number.NewNumber("4793068820")
 				return n
 			}(),
