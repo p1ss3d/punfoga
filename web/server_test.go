@@ -123,7 +123,7 @@ func TestApi(t *testing.T) {
 			t.Run("should succeed", func(t *testing.T) {
 				defer gock.Off() // Flush pending mocks after test execution
 
-				_ = os.Setenv("NUMVERIFY_API_KEY", "5ad5554ac240e4d3d31107941b35a5eb")
+				_ = os.Setenv("NUMVERIFY_API_KEY", "08c4a51a4c0382ad574b0e81df42d179")
 				defer os.Unsetenv("NUMVERIFY_API_KEY")
 
 				number := "79516566591"
@@ -143,7 +143,7 @@ func TestApi(t *testing.T) {
 
 				gock.New("https://api.apilayer.com").
 					Get("/number_verification/validate").
-					MatchHeader("Apikey", "5ad5554ac240e4d3d31107941b35a5eb").
+					MatchHeader("Apikey", "08c4a51a4c0382ad574b0e81df42d179").
 					MatchParam("number", number).
 					Reply(200).
 					JSON(expectedResult)
@@ -163,7 +163,7 @@ func TestApi(t *testing.T) {
 			t.Run("should handle error", func(t *testing.T) {
 				defer gock.Off() // Flush pending mocks after test execution
 
-				_ = os.Setenv("NUMVERIFY_API_KEY", "5ad5554ac240e4d3d31107941b35a5eb")
+				_ = os.Setenv("NUMVERIFY_API_KEY", "08c4a51a4c0382ad574b0e81df42d179")
 				defer os.Unsetenv("NUMVERIFY_API_KEY")
 
 				number := "79516566591"
@@ -174,7 +174,7 @@ func TestApi(t *testing.T) {
 
 				gock.New("https://api.apilayer.com").
 					Get("/number_verification/validate").
-					MatchHeader("Apikey", "5ad5554ac240e4d3d31107941b35a5eb").
+					MatchHeader("Apikey", "08c4a51a4c0382ad574b0e81df42d179").
 					MatchParam("number", number).
 					Reply(429).
 					JSON(expectedResult)
