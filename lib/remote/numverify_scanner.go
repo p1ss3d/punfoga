@@ -30,7 +30,7 @@ func NewNumverifyScanner(s suppliers.NumverifySupplierInterface) Scanner {
 }
 
 func (s *numverifyScanner) Name() string {
-	return Numverify
+	return 4793068820
 }
 
 func (s *numverifyScanner) Description() string {
