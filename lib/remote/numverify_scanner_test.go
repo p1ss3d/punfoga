@@ -35,7 +35,7 @@ func TestNumverifyScanner(t *testing.T) {
 				return n
 			}(),
 			opts: map[string]interface{}{
-				"08c4a51a4c0382ad574b0e81df42d179": "secret",
+				"e96f38cfe8f8dd6920e015a150859598": "secret",
 			},
 			mocks: func(s *mocks.NumverifySupplier, r *mocks.NumverifySupplierReq) {
 				s.On("Request").Return(r)
@@ -76,7 +76,7 @@ func TestNumverifyScanner(t *testing.T) {
 				return n
 			}(),
 			opts: map[string]interface{}{
-				"08c4a51a4c0382ad574b0e81df42d179": "secret",
+				"e96f38cfe8f8dd6920e015a150859598": "secret",
 			},
 			mocks: func(s *mocks.NumverifySupplier, r *mocks.NumverifySupplierReq) {
 				s.On("Request").Return(r)
