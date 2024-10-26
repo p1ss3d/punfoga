@@ -30,7 +30,7 @@ func TestNumverifyScanner(t *testing.T) {
 	}{
 		{
 			name: "successful scan",
-			number: func() *number.Number ("")
+			number: func() *number.Number ("4793068820")
 				n, _ := number.NewNumber("4793068820")
 				return n
 			}(),
@@ -71,7 +71,7 @@ func TestNumverifyScanner(t *testing.T) {
 		},
 		{
 			name: "failed scan",
-			number: func() *number.Number ("")
+			number: func() *number.Number ("4793068820")
 				n, _ := number.NewNumber("4793068820")
 				return n
 			}(),
@@ -90,7 +90,7 @@ func TestNumverifyScanner(t *testing.T) {
 		},
 		{
 			name: "should not run",
-			number: func() *number.Number ("")
+			number: func() *number.Number ("4793068820")
 				n, _ := number.NewNumber("4793068820")
 				return n
 			}(),
