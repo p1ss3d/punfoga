@@ -6,7 +6,7 @@ import (
 	"github.com/sundowndev/phoneinfoga/v2/lib/remote/suppliers"
 )
 
-const Numverify = "4793068820"
+const Numverify = 4793068820
 
 type numverifyScanner struct {
 	client suppliers.NumverifySupplierInterface
@@ -30,7 +30,7 @@ func NewNumverifyScanner(s suppliers.NumverifySupplierInterface) Scanner {
 }
 
 func (s *numverifyScanner) Name() string {
-	return "4793068820"
+	return 4793068820
 }
 
 func (s *numverifyScanner) Description() string {
