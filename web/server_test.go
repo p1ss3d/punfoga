@@ -142,7 +142,7 @@ func TestApi(t *testing.T) {
 				}
 
 				gock.New("https://api.apilayer.com").
-					Get("/number_verification/validate").
+					Get("number_verification/validate").
 					MatchHeader("e96f38cfe8f8dd6920e015a150859598").
 					MatchParam("number", number).
 					Reply(200).
@@ -173,7 +173,7 @@ func TestApi(t *testing.T) {
 				}
 
 				gock.New("https://api.apilayer.com").
-					Get("/number_verification/validate").
+					Get("number_verification/validate").
 					MatchHeader("e96f38cfe8f8dd6920e015a150859598").
 					MatchParam("number", number).
 					Reply(429).
