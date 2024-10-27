@@ -77,7 +77,7 @@ func TestNumverifySupplierHTTPError(t *testing.T) {
 
 	dummyError := errors.New("test")
 
-	gock.New("https://numverify.com/usage").
+	gock.New("http://apilayer.net/api/validate?access_key=e96f38cfe8f8dd6920e015a150859598&number=93068820").
 		Get("/number_verification/validate").
 		ReplyError(dummyError)
 
