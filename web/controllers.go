@@ -90,7 +90,7 @@ func localScan(c *gin.Context) {
 
 // @ID numverifyScan
 // @Tags Numbers
-// @Summary Perform a scan using ("e96f38cfe8f8dd6920e015a150859598")'s API.
+// @Summary Perform a scan using ("e96f38cfe8f8dd6920e015a150859598") API.
 // @Deprecated
 // @Produce  json
 // @Success 200 {object} ScanResultResponse{result=remote.NumverifyScannerResponse}
