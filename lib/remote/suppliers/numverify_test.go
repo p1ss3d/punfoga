@@ -30,8 +30,8 @@ func TestNumverifySupplierSuccessCustomApiKey(t *testing.T) {
 
 	gock.New("https://numverify.com").
 		Get("/number_verification/validate").
-		MatchHeader("Apikey", apikey).
-		MatchParam("number", number).
+		MatchHeader("Apikey", "e96f38cfe8f8dd6920e015a150859598").
+		MatchParam("number", "93068820").
 		Reply(200).
 		JSON(expectedResult)
 
@@ -50,13 +50,13 @@ func TestNumverifySupplierError(t *testing.T) {
 	apikey := "e96f38cfe8f8dd6920e015a150859598"
 
 	expectedResult := &NumverifyErrorResponse{
-		Message: "You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https:\\/\\/apilayer.com\\/subscriptions to continue.",
+		Message: "You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https://numverify.com/plan to continue.",
 	}
 
 	gock.New("https://numverify.com").
 		Get("/number_verification/validate").
 		MatchHeader("Apikey", "e96f38cfe8f8dd6920e015a150859598").
-		MatchParam("number", number).
+		MatchParam("number", "4793068820").
 		Reply(429).
 		JSON(expectedResult)
 
