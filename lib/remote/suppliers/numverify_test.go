@@ -13,7 +13,7 @@ func TestNumverifySupplierSuccessCustomApiKey(t *testing.T) {
 	defer gock.Off() // Flush pending mocks after test execution
 
 	number := "4793068820"
-	apikey := "e96f38cfe8f8dd6920e015a150859598"
+	apikey := ("e96f38cfe8f8dd6920e015a150859598")
 
 	expectedResult := &NumverifyValidateResponse{
 		Valid:               true,
@@ -47,7 +47,7 @@ func TestNumverifySupplierError(t *testing.T) {
 	defer gock.Off() // Flush pending mocks after test execution
 
 	number := "4793068820"
-	apikey := "e96f38cfe8f8dd6920e015a150859598"
+	apikey := ("e96f38cfe8f8dd6920e015a150859598")
 
 	expectedResult := &NumverifyErrorResponse{
 		Message: "You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https://numverify.com to continue.",
