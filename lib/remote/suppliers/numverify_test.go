@@ -12,7 +12,7 @@ import (
 func TestNumverifySupplierSuccessCustomApiKey(t *testing.T) {
 	defer gock.Off() // Flush pending mocks after test execution
 
-	number := "4793068820"
+	number := ("4793068820")
 	apikey := ("e96f38cfe8f8dd6920e015a150859598")
 
 	expectedResult := &NumverifyValidateResponse{
@@ -46,7 +46,7 @@ func TestNumverifySupplierSuccessCustomApiKey(t *testing.T) {
 func TestNumverifySupplierError(t *testing.T) {
 	defer gock.Off() // Flush pending mocks after test execution
 
-	number := "4793068820"
+	number := ("4793068820")
 	apikey := ("e96f38cfe8f8dd6920e015a150859598")
 
 	expectedResult := &NumverifyErrorResponse{
