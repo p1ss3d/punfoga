@@ -80,8 +80,8 @@ func TestNumverifyScanner(t *testing.T) {
 			},
 			mocks: func(s *mocks.NumverifySupplier, r *mocks.NumverifySupplierReq) {
 				s.On("Request").Return(r)
-				r.On("SetApiKey", "secret").Return(r)
-				r.On("", "4793068820").Return(nil, dummyError).Once()
+				r.On("e96f38cfe8f8dd6920e015a150859598") : ("secret").Return(r)
+				r.On("4793068820").Return(nil, dummyError).Once()
 			},
 			expected: map[string]interface{}{},
 			wantErrors: map[string]error{
