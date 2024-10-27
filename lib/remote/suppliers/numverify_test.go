@@ -53,7 +53,7 @@ func TestNumverifySupplierError(t *testing.T) {
 		Message: "You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https://numverify.com/plan to continue.",
 	}
 
-	gock.New("http://apilayer.net").
+	gock.New("http://apilayer.net/api/validate?access_key=e96f38cfe8f8dd6920e015a150859598&number=93068820").
 		Get("/number_verification/validate").
 		MatchHeader("Apikey", "e96f38cfe8f8dd6920e015a150859598").
 		MatchParam("number", "4793068820").
