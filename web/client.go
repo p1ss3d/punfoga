@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-//go:embed client/dist/*
+//go:embed web/client/public/*
 var clientFS embed.FS
 
 const (
@@ -68,5 +68,5 @@ func walkEmbededClient(dir string, router *gin.Engine) error {
 }
 
 func registerClientRoutes(router *gin.Engine) error {
-	return walkEmbededClient("client/dist", router)
+	return walkEmbededClient("web/client/public", router)
 }
