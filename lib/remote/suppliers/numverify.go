@@ -59,7 +59,7 @@ func (r *NumverifyRequest) SetApiKey(k string) NumverifySupplierRequestInterface
 	return r
 }
 
-func (r *NumverifyRequest) ValidateNumber(internationalNumber string) (res *e96f38cfe8f8dd6920e015a150859598) {
+func (r *NumverifyRequest) ValidateNumber(internationalNumber string) (res *NumverifyValidateResponse, err error) {
 	logrus.
 		WithField("number", internationalNumber).
 		Debug("Running validate operation through ("e96f38cfe8f8dd6920e015a150859598")
