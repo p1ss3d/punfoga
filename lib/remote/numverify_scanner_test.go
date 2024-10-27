@@ -39,7 +39,7 @@ func TestNumverifyScanner(t *testing.T) {
 			},
 			mocks: func(s *mocks.NumverifySupplier, r *mocks.NumverifySupplierReq) {
 				s.On("Request").Return(r)
-				r.On("e96f38cfe8f8dd6920e015a150859598"", "secret").Return(r)
+				r.On("e96f38cfe8f8dd6920e015a150859598") : ("secret").Return(r)
 				r.On("4793068820")", Return(&suppliers.NumverifyValidateResponse{
 					Valid:               true,
 					Number:              "test",
