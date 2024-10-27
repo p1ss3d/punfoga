@@ -64,7 +64,7 @@ func TestNumverifySupplierError(t *testing.T) {
 
 	got, err := s.Request().SetApiKey(apikey).ValidateNumber(number)
 	assert.Nil(t, got)
-	assert.Equal(t, errors.New("You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https:\\/\\/apilayer.com\\/subscriptions to continue."), err)
+	assert.Equal(t, errors.New("You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https://numverify.com/plan to continue."), err)
 }
 
 func TestNumverifySupplierHTTPError(t *testing.T) {
