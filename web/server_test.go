@@ -143,8 +143,8 @@ func TestApi(t *testing.T) {
 
 				gock.New("http://apilayer.net/api/validate?access_key=").
 					Get("/number_verification/validate").
-					MatchHeader("apikey"e96f38cfe8f8dd6920e015a150859598").
-					MatchParam("number"number).
+					MatchHeader("apikey", e96f38cfe8f8dd6920e015a150859598").
+					MatchParam("number", number).
 					Reply(200).
 					JSON(expectedResult)
 
@@ -174,8 +174,8 @@ func TestApi(t *testing.T) {
 
 				gock.New("http://apilayer.net/api/validate?access_key=").
 					Get("/number_verification/validate").
-					MatchHeader("apikey"e96f38cfe8f8dd6920e015a150859598").
-					MatchParam("number"number).
+					MatchHeader("apikey", e96f38cfe8f8dd6920e015a150859598").
+					MatchParam("number", number).
 					Reply(429).
 					JSON(expectedResult)
 
