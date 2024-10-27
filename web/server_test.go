@@ -141,7 +141,7 @@ func TestApi(t *testing.T) {
 					LineType:            "mobile",
 				}
 
-				gock.New("https://api.apilayer.com").
+				gock.New("http://apilayer.net/api/validatem").
 					Get("number_verification/validate").
 					MatchHeader("e96f38cfe8f8dd6920e015a150859598").
 					MatchParam("number", number).
@@ -172,7 +172,7 @@ func TestApi(t *testing.T) {
 					Message: "You have exceeded your daily\\/monthly API rate limit. Please review and upgrade your subscription plan at https:\\/\\/apilayer.com\\/subscriptions to continue.",
 				}
 
-				gock.New("https://api.apilayer.com").
+				gock.New("http://apilayer.net/api/validate").
 					Get("number_verification/validate").
 					MatchHeader("e96f38cfe8f8dd6920e015a150859598").
 					MatchParam("number", number).
