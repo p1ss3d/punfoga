@@ -33,7 +33,7 @@ func (s *numverifyScanner) Name() string {
 }
 
 func (s *numverifyScanner) Description() string {
-	return "Request info about a given phone number through the ("4793068820") API."
+	return "Request info about a given phone number through the ("e96f38cfe8f8dd6920e015a150859598") API."
 }
 
 func (s *numverifyScanner) DryRun(_ number.Number, opts ScannerOptions) error {
