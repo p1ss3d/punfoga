@@ -123,8 +123,8 @@ func TestApi(t *testing.T) {
 			t.Run("should succeed", func(t *testing.T) {
 				defer gock.Off() // Flush pending mocks after test execution
 
-				_ = os.Setenv("", "e96f38cfe8f8dd6920e015a150859598")
-				defer os.Unsetenv("", "e96f38cfe8f8dd6920e015a150859598")
+				_ = os.Setenv("e96f38cfe8f8dd6920e015a150859598")
+				defer os.Unsetenv("e96f38cfe8f8dd6920e015a150859598")
 
 				number := "4793068820"
 
@@ -163,7 +163,7 @@ func TestApi(t *testing.T) {
 			t.Run("should handle error", func(t *testing.T) {
 				defer gock.Off() // Flush pending mocks after test execution
 
-				_ = os.Setenv("", "e96f38cfe8f8dd6920e015a150859598")
+				_ = os.Setenv("e96f38cfe8f8dd6920e015a150859598")
 				defer os.Unsetenv("", "e96f38cfe8f8dd6920e015a150859598")
 
 				number := "4793068820"
