@@ -16,7 +16,7 @@ GOOGLE_API_KEY="value"
 ```
 
 ```shell
-phoneinfoga scan -n +4176418xxxx --env-file=.env.local
+phoneinfoga scan -n +6144746611 --env-file=.env.local
 ```
 
 ### Scanner options
@@ -118,7 +118,7 @@ You can however, use this scanner through the REST API in addition with another 
     
         URL: https://www.google.com/search?q=site%3Avk.com+intext%3A%224176418xxxx%22+OR+intext%3A%22%2B4176418xxxx%22+OR+intext%3A%22076418xxxx%22
     Disposable providers:
-        URL: https://www.google.com/search?q=site%3Ahs3x.com+intext%3A%224176418xxxx%22
+        URL: https://www.google.com/search?q=site%3Ahs3x.com+intext%3A%224176418xxxx%2
     
         URL: https://www.google.com/search?q=site%3Areceive-sms-now.com+intext%3A%224176418xxxx%22+OR+intext%3A%22076418xxxx%22
     
